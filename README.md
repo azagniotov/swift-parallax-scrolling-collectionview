@@ -1,4 +1,4 @@
-### Parallax Scrolling using UICollectionView and custom UICollectionViewCell in Swift
+#### Parallax Scrolling using UICollectionView and UICollectionViewCell in Swift
 ##### Parallax scrolling using a moving background and a static foreground (alpha) images
 
 [Parallax scrolling](https://en.wikipedia.org/wiki/Parallax_scrolling) is a big UI design trend these days. It is a technique 
