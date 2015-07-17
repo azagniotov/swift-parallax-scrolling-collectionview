@@ -1,7 +1,7 @@
 ### Parallax Scrolling in Swift UICollectionViewController
-##### Parallax scrolling using moving background and static foreground (alpha) images
+##### Parallax scrolling using a moving background and a static foreground (alpha) images
 
-[Parallax scrolling](https://en.wikipedia.org/wiki/Parallax_scrolling) is a big UI design trend these days. Is a technique 
+[Parallax scrolling](https://en.wikipedia.org/wiki/Parallax_scrolling) is a big UI design trend these days. It is a technique 
 where background images move by the camera slower than foreground images, creating an illusion of depth in a 2D scene and 
 adding to the immersion.
 
