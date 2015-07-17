@@ -11,14 +11,16 @@ In this example we are using [UICollectionView](https://developer.apple.com/libr
 2. Foreground alpha image which remains static on top of the background image. The foreground can be a transparent image with some text 
 
 ```
-   override public func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-      let cell:ParallaxCollectionViewCell = 
-            collectionView.dequeueReusableCellWithReuseIdentifier("parallaxCellId", forIndexPath: indexPath) as! ParallaxCollectionViewCell
-      cell.backgroundImage = UIImage(named: "\(images[indexPath.row])_background.png")!
-      cell.foregroundImage = UIImage(named: "\(images[indexPath.row])_alpha.png")!
+override public func collectionView(collectionView: UICollectionView, 
+                                    cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+   let cell:ParallaxCollectionViewCell = 
+            collectionView.dequeueReusableCellWithReuseIdentifier("parallaxCellId", forIndexPath: indexPath) 
+                    as! ParallaxCollectionViewCell
+   cell.backgroundImage = UIImage(named: "\(images[indexPath.row])_background.png")!
+   cell.foregroundImage = UIImage(named: "\(images[indexPath.row])_alpha.png")!
         
-      return cell
-   }
+   return cell
+}
 ```
 
 
