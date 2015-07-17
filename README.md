@@ -8,7 +8,19 @@ adding to the immersion.
 In this example we are using [UICollectionView](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UICollectionView_class/index.html) which is subclass of a [UIScrollView](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIScrollView_Class/index.html) and two images per CollectionView cell [UICollectionViewCell](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UICollectionViewCell_class/index.html):
 
 1. Background image which we going to use for parallax scrolling effect. The image here can be an image of some scenery
-2. Foreground alpha image which going to remain static on top of the background image. It can be a transparent image with some text 
+2. Foreground alpha image which remains static on top of the background image. The foreground can be a transparent image with some text 
+
+```
+   override public func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+      let cell:ParallaxCollectionViewCell = 
+            collectionView.dequeueReusableCellWithReuseIdentifier("parallaxCellId", forIndexPath: indexPath) as! ParallaxCollectionViewCell
+      cell.backgroundImage = UIImage(named: "\(images[indexPath.row])_background.png")!
+      cell.foregroundImage = UIImage(named: "\(images[indexPath.row])_alpha.png")!
+        
+      return cell
+   }
+```
+
 
 ### Inspired By
 
