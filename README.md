@@ -44,7 +44,8 @@ how many cells should be visible to user at once:
 public func collectionView(collectionView: UICollectionView, 
                            layout collectionViewLayout: UICollectionViewLayout, 
                            sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-   return CGSizeMake(self.view.bounds.width, self.view.bounds.height / ParallaxConstants.CellsPerCollectionView)
+   return CGSizeMake(
+            self.view.bounds.width, self.view.bounds.height / ParallaxConstants.CellsPerCollectionView)
 }
 ```
 
