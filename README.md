@@ -23,6 +23,20 @@ override public func collectionView(collectionView: UICollectionView,
 }
 ```
 
+The parallax scrolling is achieved by overriding `UIScrollView` delegate method `scrollViewDidScroll` where we change
+the `Y` axis offset of the background image view in relation to the parent cell:
+
+```
+override public func scrollViewDidScroll(scrollView: UIScrollView) {
+   for cell in collectionView!.visibleCells() {
+      var cell:ParallaxCollectionViewCell = cell as! ParallaxCollectionViewCell
+      let yOffset:CGFloat = ((collectionView!.contentOffset.y - cell.frame.origin.y) / 
+            cell.backgroundImageView.bounds.height) * ParallaxConstants.OffsetSpeed
+      cell.setBackgroundImageOffset(CGPointMake(0, yOffset))
+   }
+}
+```
+
 
 ### Inspired By
 
