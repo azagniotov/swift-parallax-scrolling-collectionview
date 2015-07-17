@@ -7,7 +7,7 @@ adding to the immersion.
 
 In this example we are using [UICollectionView](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UICollectionView_class/index.html) which is subclass of a [UIScrollView](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIScrollView_Class/index.html) and two images per CollectionView cell [UICollectionViewCell](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UICollectionViewCell_class/index.html):
 
-1. Background image which we going to use for parallax scrolling effect. The image here can be an image of some scenery
+1. Background image which we are going to use for the parallax scrolling effect. The image here can be an image of some scenery
 2. Foreground alpha image which remains static on top of the background image. The foreground can be a transparent image with some text 
 
 ```
