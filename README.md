@@ -37,6 +37,16 @@ override public func scrollViewDidScroll(scrollView: UIScrollView) {
    }
 }
 ```
+We are using delegate `collectionView:layout:sizeForItemAtIndexPath:` from [UICollectionViewDelegateFlowLayout](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UICollectionViewDelegateFlowLayout_protocol/index.html) to control the height of cells in our `UICollectionView`. In other words, 
+how many cells should be visible to user at once:
+
+```
+public func collectionView(collectionView: UICollectionView, 
+                           layout collectionViewLayout: UICollectionViewLayout, 
+                           sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+   return CGSizeMake(self.view.bounds.width, self.view.bounds.height / ParallaxConstants.CellsPerCollectionView)
+}
+```
 
 
 ### Inspired By
