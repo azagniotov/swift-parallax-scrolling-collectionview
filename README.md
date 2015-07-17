@@ -14,8 +14,8 @@ In this example we are using [UICollectionView](https://developer.apple.com/libr
 override public func collectionView(collectionView: UICollectionView, 
             cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
    let cell:ParallaxCollectionViewCell = 
-            collectionView.dequeueReusableCellWithReuseIdentifier("parallaxCellId", 
-                                                               forIndexPath: indexPath) as! ParallaxCollectionViewCell
+            collectionView.dequeueReusableCellWithReuseIdentifier(
+                     "parallaxCellId", forIndexPath: indexPath) as! ParallaxCollectionViewCell
    cell.backgroundImage = UIImage(named: "\(images[indexPath.row])_background.png")!
    cell.foregroundImage = UIImage(named: "\(images[indexPath.row])_alpha.png")!
         
